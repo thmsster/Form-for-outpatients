@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поликлиника - Учет посетителей</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="D:/uni/3 course/vtip/10 (2) lab/style/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Городская поликлиника №1</h1>
+            <h2>Система учета посетителей</h2>
+        </header>
+
+        <div class="content">
+            <!-- Картинка -->
+            <img src="D:/uni/3 course/vtip/10 (2) lab/resourses/clinic.jpg" alt="Поликлиника" class="clinic-image">
+
+            <!-- Форма ввода -->
+            <form id="visitorForm" class="visitor-form">
+                <input type="text" id="fullName" placeholder="ФИО пациента" required>
+                <input type="text" id="address" placeholder="Адрес проживания" required>
+                <input type="tel" id="phone" placeholder="Номер телефона" required>
+                <input type="date" id="lastVisit" required>
+                
+                <select id="doctor" required>
+                    <option value="">Выберите врача</option>
+                    <option value="Терапевт">Терапевт</option>
+                    <option value="Хирург">Хирург</option>
+                    <option value="Кардиолог">Кардиолог</option>
+                    <option value="Невролог">Невролог</option>
+                    <option value="Окулист">Окулист</option>
+                </select>
+
+                <div class="button-group">
+                    <button type="button" id="addBtn" class="btn primary">Добавить</button>
+                    <button type="button" id="clearBtn" class="btn secondary">Очистить форму</button>
+                    <button type="button" id="deleteBtn" class="btn danger">Удалить</button>
+                    <button type="button" id="showAllBtn" class="btn info">Показать всех</button>
+                    <button type="button" id="showByIdBtn" class="btn warning">Показать по ID</button>
+                </div>
+            </form>
+
+            <!-- Выпадающий список -->
+            <select id="idSelector" class="id-selector">
+                <option value="">-- Выберите ID --</option>
+            </select>
+
+            <!-- Место для вывода данных -->
+            <div id="output" class="output"></div>
+        </div>
+
+        <footer>
+            <p>© 2026 Поликлиника №1</p>
+        </footer>
+    </div>
+
+    <script src="D:/uni/3 course/vtip/10 (2) lab/template/template.js"></script>
+    <script src="D:/uni/3 course/vtip/10 (2) lab/app/app.js"></script>
+</body>
+</html>
